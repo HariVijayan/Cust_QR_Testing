@@ -1,0 +1,475 @@
+body {
+	font-family: 'Gowun Dodum', sans-serif;
+	background-color: #f5f5f5;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	color: black;
+	margin: 0 auto;
+}
+
+#dv-header {
+	float: left;
+	width: 100%;
+	background-color: #f5f5f5;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+#h1-webname {
+	font-size: 40px;
+	font-family: 'Style Script', cursive;
+	margin: 0 auto;
+	display: inline;
+	color: black;
+	margin-left: 0.3em;
+}
+
+#bt-home {
+	display: inline;
+	background: rgb(0, 0, 0, 0);
+	border: none;
+	font-size: 25px;
+	padding: 0.5em 1em 0.5em 1em;
+	vertical-align: top;
+	margin-left: 5em;
+}
+
+#bt-about {
+	display: inline;
+	background: rgb(0, 0, 0, 0);
+	border: none;
+	font-size: 25px;
+	padding: 0.5em 1em 0.5em 1.5em;
+	margin-left: 1em;
+	vertical-align: top;
+	margin-left: 5em;
+}
+
+#bt-faqs {
+	display: inline;
+	background: rgb(0, 0, 0, 0);
+	border: none;
+	font-size: 25px;
+	padding: 0.5em 1em 0.5em 1.5em;
+	margin-left: 1em;
+	vertical-align: top;
+	margin-left: 5em;
+}
+
+#bt-contact {
+	display: inline;
+	background: rgb(0, 0, 0, 0);
+	border: none;
+	font-size: 25px;
+	padding: 0.5em 1em 0.5em 1.5em;
+	margin-left: 1em;
+	vertical-align: top;
+	margin-left: 5em;
+}
+
+#dv-header a {
+	text-decoration: none;
+	color: black;
+}
+
+#dv-header button:hover {
+	cursor: pointer;
+	transform: scale(1.3);
+	transition: transform 0.7s ease;
+}
+
+#bt-lm {
+	font-size: 30px;
+	color: black;
+	vertical-align: top;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	cursor: pointer;
+	margin-left: 3em;
+}
+
+#bt-dm {
+	font-size: 30px;
+	color: black;
+	vertical-align: top;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	cursor: pointer;
+	margin-left: 3em;
+}
+
+#bt-lm:hover,
+#bt-dm:hover {
+	transform: scale(1.3);
+	transition: transform 0.7s ease;
+}
+
+#dv-lspace {
+	float: left;
+	width: 12.5%;
+	height: 50em;
+	margin-top: 1em;
+	background-color: #f5f5f5;
+}
+
+#dv-rspace {
+	float: left;
+	width: 12.5%;
+	height: 50em;
+	margin-top: 1em;
+	background-color: #f5f5f5;
+}
+
+#dv-project {
+	float: left;
+	width: 75%;
+	margin-top: 4em;
+	background-color: #f5f5f5;
+	margin-bottom: 1em;
+}
+
+
+#dv-contact {
+	float: left;
+	width: 90%;
+	margin-top: 2em;
+	margin-bottom: 3em;
+	padding-left: 9em;
+	position: relative;
+}
+
+#h1-contact {
+	font-family: 'Style Script', cursive;
+	margin-left: 15em;
+	font-size: 35px;
+	border-bottom: 2px solid red;
+	padding-bottom: 5px;
+	width: 140px;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+#dv-conimg {
+	float: left;
+	width: 35%;
+	background-color: #b8b8b8;
+	border-radius: 10%;
+	padding: 1em 0em 1em 2em;
+	margin-left: 3em;
+	position: absolute;
+}
+
+#im-conmsg {
+	height: 750px;
+  width: 500px;
+}
+
+#dv-conform {
+	float: left;
+	width: 83%;
+	background-color: black;
+	padding-bottom: 6em;
+	margin-top: 5em;
+	margin-left: 3em;
+	text-align: right;
+	border-radius: 4%;
+}
+
+
+#h2-conform {
+	margin-right: 9em;
+	color: white;
+	text-decoration: underline solid red 5%;
+	width: 180px;
+	float: right;
+	margin-bottom: 1.5em;
+}
+
+#dv-conformleft {
+	float: left;
+	width: 60%;
+	text-align: right;
+}
+
+#dv-conformright {
+	float: left;
+	width: 40%;
+}
+
+#in-conname {
+	width: 75%;
+	padding: 12px;
+	border: 2px solid gold;
+	border-radius: 6px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 65px;
+	resize: vertical;
+	background-color: #101d2d00;
+	color: white;
+	outline: none;
+	margin-right: 4em;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+#in-conmail {
+	width: 75%;
+	padding: 12px;
+	border: 2px solid gold;
+	border-radius: 6px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 65px;
+	resize: vertical;
+	background-color: #101d2d00;
+	color: white;
+	outline: none;
+	margin-right: 4em;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+#tx-confeedback {
+	width: 75%;
+	height: 225px;
+	padding: 12px;
+	border: 2px solid gold;
+	border-radius: 6px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 65px;
+	resize: vertical;
+	background-color: #101d2d00;
+	color: white;
+	outline: none;
+	margin-right: 4em;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+#bt-contactsub {
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 1em;
+	margin-right: 17em;
+	background-color: #101d2d00;
+	border: 2px solid gold;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+#bt-contactsub:hover {
+	background-color: gold;
+	color: black;
+}
+
+#h3-conname {
+	padding-bottom: 3em;
+	padding-right: 2.7em;
+	padding-top: 3.5em;
+	margin: 0 auto;
+	color: gold;
+}
+
+#h3-conmail {
+	padding-bottom: 4em;
+	padding-right: 1.8em;
+	padding-top: 1.3em;
+	margin: 0 auto;
+	color: gold;
+}
+
+#h3-confeedback {
+	padding-bottom: 1em;
+	padding-right: 1em;
+	padding-top: 1em;
+	margin: 0 auto;
+	color: gold;
+}
+
+#h3-conrating {
+	padding-bottom: 4em;
+	padding-right: 2.3em;
+	padding-top: 1.3em;
+	margin: 0 auto;
+	color: gold;
+}
+
+#bt-starrating1,
+#bt-starrating2,
+#bt-starrating3,
+#bt-starrating4,
+#bt-starrating5 {
+	color: white;
+	font-size: 35px;
+	padding-right: 37px;
+}
+
+#bt-starrating1:hover,
+#bt-starrating2:hover,
+#bt-starrating3:hover,
+#bt-starrating4:hover,
+#bt-starrating5:hover,
+#bt-starrating1.hovered,
+#bt-starrating2.hovered,
+#bt-starrating3.hovered,
+#bt-starrating4.hovered,
+#bt-starrating5.hovered {
+	color: gold;
+	cursor: pointer;
+}
+
+
+#li-constar {
+	display: inline;
+}
+
+#dv-conformright ul {
+	margin-right: 1em;
+	padding-bottom: 3em;
+}
+
+.material-symbols-outlined {
+	font-variation-settings:
+		'FILL' 100,
+		'wght' 700,
+		'GRAD' 200,
+		'opsz' 48
+}
+
+#dv-footer {
+	float: left;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+#bt-copyright {
+	color: white;
+	font-size: 25px;
+}
+
+#p-footer {
+	color: white;
+	display: inline;
+	vertical-align: top;
+	margin-left: 0.5em;
+}
+
+#dv-footer a {
+	text-decoration: none;
+	color: white;
+}
+
+#h1-decqr {
+	text-align: center;
+	font-family: 'Style Script', cursive;
+	font-size: 35px;
+	border-bottom: 2px solid red;
+	padding-bottom: 5px;
+	width: 455px;
+	margin-left: 10.5em;
+}
+
+#dv-decodeimg {
+	float: left;
+	width: 50%;
+	padding: 3em;
+}
+
+#bt-uploadqr {
+	font-size: 90px;
+	border: 30px solid #3a8abe;
+	padding: 15px 280px 15px 15px;
+	position: absolute;
+	margin-top: 1em;
+}
+
+#h2-uplfile {
+	font-size: 50px;
+	position: relative;
+	margin-left: 3em;
+	margin-bottom: 0.5em;
+	margin-top: 2.7em;
+}
+
+#bt-uploadqr:hover,
+#h2-uplfile:hover {
+	cursor: pointer;
+}
+
+#in-decqr {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+#h4-filename {
+	font-size: 20px;
+	width: 445px;
+}
+
+#bt-decodesub {
+	color: black;
+	padding: 12px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 1em;
+	margin-left: 13em;
+	background-color: transparent;
+	border: 2px solid black;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+#bt-decodesub:hover {
+	color: white;
+	background-color: black;
+}
+
+#dv-decodetext {
+	float: left;
+	width: 32%;
+	padding: 5.5em 3em 3em 3em;
+}
+
+#im-userqr {
+	height: 500px;
+	width: 500px;
+}
+
+#h2-userimg {
+	margin-left: 3em;
+	font-size: 40px;
+}
+
+#h2-decstate-s {
+	font-size: 40px;
+	color: #25b04a;
+	display: inline;
+}
+
+#h2-decmsg {
+	font-size: 30px;
+	border: 2px solid #3a8abe;
+	padding: 20px;
+	word-wrap: break-word;
+}
+
+#h2-decstate-f {
+	font-size: 40px;
+	color: #eb0909;
+	display: inline;
+}
+
+#bt-copy {
+	font-size: 40px;
+	margin-left: 0.5em;
+}
+
+#bt-copy:hover {
+	cursor: pointer;
+}
