@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Cust QR - Customizable QR generating website</title>
+      <link rel="shortcut icon" type="image/png" href="/Images/verlg.png"/>
+      <link rel="stylesheet" type="text/css" href="indexlight.css" id="viewmode">
+      <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script type="text/javascript" src="index.js"></script>
+   </head>
+   <body>
+      <div id="dv-header">
+         <h1 id="h1-webname"><a href="">Cust QR</a></h1>
+         <a href=""><button id="bt-home">Home</button></a>
+         <a href=""><button id="bt-about">About</button></a>
+         <a href=""><button id="bt-faqs">Faq's</button></a>
+         <a href="#dv-contact"><button id="bt-contact">Contact Us</button></a>
+         <span class="material-symbols-outlined" id="bt-lm" onclick="LMode()">light_mode</span>
+         <span class="material-symbols-outlined" id="bt-dm" onclick="DMode()">dark_mode</span>
+      </div>
+      <div id="dv-websitedesc">
+         <div id="dv-wwhat">
+            <h4 id="h4-wwdesc">What is CustQR?</h4>
+         </div>
+         <div id="dv-wwans">
+            <p id="p-wwansp">Cust QR is a personal project which is built with the only motive of customizing boring QR's into awesome unique QR's.</p>
+         </div>
+         <div id="dv-wwhy">
+            <h4 id="h4-wwhdesc">Why CustQR?</h4>
+         </div>
+         <div id="dv-wwhans">
+            <p id="p-wwhansp">Cust QR is built using Google's robust ZXing Library which enables hassle free user experience. Also the site aims to provide all the possible customizations which could be possible on a QR.</p>
+         </div>
+      </div>
+      <div id="dv-lspace">
+      </div>
+      <div id="dv-project">
+         <a href="createqr.html" id="a-createqr">
+            <div id="dv-createqr">
+               <h2 id="h2-createqr">Create QR</h2>
+               <p id="p-createqr">Click me to create awesome QR's!</p>
+               <br>
+            </div>
+         </a>
+         <a href="decode.html" id="a-decodeqr">
+            <div id="dv-decodeqr">
+               <h2 id="h2-decodeqr">Decode QR</h2>
+               <p id="p-decodeqr">Click me to decode existing QR's<br><sub>(βeta version)</sub></p>
+            </div>
+         </a>
+      </div>
+      <div id="dv-rspace">
+      </div>
+      <div id="dv-contact">
+         <h1 id="h1-contact">Contact US</h1>
+         <div id="dv-conimg">
+            <img th:src="@{/Images/fd.png}" id="im-conmsg" alt="Request for Feedback">
+         </div>
+         <div id="dv-conform">
+            <h2 id="h2-conform">Reach out to us!</h2>
+            <br><br>
+            <div id="dv-conformleft">
+               <h3 id="h3-conname">Name</h3>
+               <h3 id="h3-conmail">Mail-ID</h3>
+               <h3 id="h3-conrating">Rating</h3>
+               <h3 id="h3-confeedback">Feedback</h3>
+            </div>
+            <div id="dv-conformright">
+               <form id="fo-feedbackform"action="Feedback" method="post">
+                  <input type="text" id="in-conname" name="User_Name" placeholder="Please Enter Your Name..">
+                  <input type="text" id="in-conmail" name="MailID" placeholder="Please Enter Your Mail ID..">
+                  <ul>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating1">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating2">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating3">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating4">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating5">star</span></li>
+                  </ul>
+                  <textarea id="tx-confeedback" name="Feedbacks" placeholder="Explain What We Can Improve.."></textarea>
+                  <input type="submit" id="bt-contactsub" value="Submit">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div id="dv-footer">
+         <span class="material-symbols-outlined" id="bt-copyright">copyright</span>
+         <p id="p-footer">2024 - <a href="">CustQR.com</a></p>
+      </div>
+   </body>
+</html>

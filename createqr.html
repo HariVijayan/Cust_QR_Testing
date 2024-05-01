@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Cust QR - Customizable QR generating website</title>
+      <link rel="shortcut icon" type="image/png" href="/Images/verlg.png"/>
+      <link rel="stylesheet" type="text/css" href="createqrlight.css" id="viewmode">
+      <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script type="text/javascript" src="createqr.js"></script>
+   </head>
+   <body onload="chbxcheck();showsize();">
+      <div id="dv-header">
+         <h1 id="h1-webname"><a href="index.html">Cust QR</a></h1>
+         <a href=""><button id="bt-home">Home</button></a>
+         <a href=""><button id="bt-about">About</button></a>
+         <a href=""><button id="bt-faqs">Faq's</button></a>
+         <a href="#dv-contact"><button id="bt-contact">Contact Us</button></a>
+         <span class="material-symbols-outlined" id="bt-lm" onclick="LMode()">light_mode</span>
+         <span class="material-symbols-outlined" id="bt-dm" onclick="DMode()">dark_mode</span>
+      </div>
+      <div id="dv-lspace">
+      </div>
+      <div id="dv-project">
+         <h1 id="h1-createqr">Create QR</h1>
+         <div id="dv-leftopt">
+            <div id="dv-qrinp">
+               <h2 id="h2-input">QR Input</h2>
+               <div id="dv-qrinpfm">
+                  <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                     <textarea id="tx-input"></textarea>
+                  </form>
+               </div>
+            </div>
+            <div id="dv-customization">
+               <h4 id="h2-custype">Customized QR : <input type="checkbox" id="cx-ycs" class="checkboxes" onclick="custchbx(this);enableall();" value="YesCustomization">Basic QR : <input type="checkbox" id="cx-ncs" class="checkboxes" onclick="custchbx(this);disableall();" value="NoCustomization"></h4>
+            </div>
+            <div id="dv-qrclropt">
+               <div id="dv-clrheading">
+                  <h2 id="h2-coloring">Coloring Options</h2>
+                  <span class="material-symbols-outlined" id="bt-downclr" onclick="showqrclr()">Add</span><span class="material-symbols-outlined" id="bt-upclr" onclick="hideqrclr()">Remove</span>
+               </div>
+               <div id="dv-qrbg">
+                  <div id="dv-qrbgleft">
+                     <h2 id="h2-bgclr">Background : </h2>
+                  </div>
+                  <div id="dv-qrbgright">
+                     <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                        <input type="color" id="in-bgclr" value="#ffffff" onchange="showQR()">   
+                     </form>
+                  </div>
+               </div>
+               <div id="dv-qrclr">
+                  <div id="dv-qrclrleft">
+                     <h2 id="h2-qrclr">QR Color : </h2>
+                  </div>
+                  <div id="dv-qrclrright">
+                     <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                        <input type="color" id="in-qrclr" onchange="showQR()"> 
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div id="dv-qrsize">
+               <div id="dv-sizeheading">
+                  <h2 id="h2-size">Sizing Options</h2>
+                  <span class="material-symbols-outlined" id="bt-downsize" onclick="showqrsize()">Add</span><span class="material-symbols-outlined" id="bt-upsize" onclick="hideqrsize()">Remove</span>
+               </div>
+               <div id="dv-qrsizefm">
+                  <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                     <input type="range" min="250" max="5000" step="50" value="500" class="slider" id="in-size" oninput="showsize()">
+                     <h2 id="h2-pxvalue">
+                        <p id="in-pxvalue"></p>
+                        pixels
+                     </h2>
+                  </form>
+               </div>
+            </div>
+            <div id="dv-qrlogoopt">
+               <div id="dv-logoheading">
+                  <h2 id="h2-logo">Logo Options</h2>
+                  <span class="material-symbols-outlined" id="bt-downlogo" onclick="showqrlogo()">Add</span><span class="material-symbols-outlined" id="bt-uplogo" onclick="hideqrlogo()">Remove</span>
+               </div>
+               <div id="dv-qrlogo">
+                  <div id="dv-qrlogoleft">
+                     <h2 id="h2-logoopt">Logo : </h2>
+                  </div>
+                  <div id="dv-qrlogoright">
+                     <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                        <select id="se-logoopt" name="LogoOptions" onchange="showQR()">
+                           <option value="NA">No Logo</option>
+                           <option value="Custom">Custom Logo</option>
+                           <option value="Facebook">Facebook</option>
+                           <option value="Twitter">X (Twitter)</option>
+                           <option value="Instagram">Instagram</option>
+                           <option value="LinkedIn">Linked In</option>
+                        </select>
+                     </form>
+                  </div>
+               </div>
+               <div id="dv-qrcustlg">
+                  <div id="dv-qrcustlgleft">
+                     <h2 id="h2-cuslg">Custom Logo : </h2>
+                  </div>
+                  <div id="dv-qrcustlgright">
+                     <span class="material-symbols-outlined" id="bt-uplcustlogo" onclick="triggerlogoupl()">upload_file</span>
+                     <h2 id="h2-upllogo" onclick="triggerlogoupl()">Upload Logo</h2>
+                     <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                        <input type="file" id="in-custlg" name="logoimg" onchange="triggerlogoname();showQR();" enctype="multipart/form-data">
+                        <h4 id="h4-logoname"></h4>
+                     </form>
+                  </div>
+               </div>
+               <div id="dv-qrlogotext">
+                  <div id="dv-qrlgtxtleft">
+                     <h2 id="h2-lgtext">Logo Text : </h2>
+                  </div>
+                  <div id="dv-qrlgtxtright">
+                     <form id="fm-qrgen" action="ConverttoQR" method="post" accept-charset="UTF-8">
+                        <input type="text" id="in-lgtext" maxlength="20" onchange="showQR()">   
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <input type="button" id="bt-qrsubmit" value="Generate QR" onclick="generateQRCode()">
+         </div>
+         <div id="dv-rightdisplay">
+            <div id="dv-rigdisqr">
+               <h2 id="h2-qrstate" style="color:#0cb7f0">Reference Image</h2>
+               <img th:src="@{/Images/Reference.png}" id="im-ref" height="350px" width="350px" alt="Reference">
+            </div>
+         </div>
+      </div>
+      <div id="dv-rspace">
+      </div>
+      <div id="dv-contact">
+         <h1 id="h1-contact">Contact US</h1>
+         <div id="dv-conimg">
+            <img th:src="@{/Images/fd.png}" id="im-conmsg" alt="Request for Feedback">
+         </div>
+         <div id="dv-conform">
+            <h2 id="h2-conform">Reach out to us!</h2>
+            <br><br>
+            <div id="dv-conformleft">
+               <h3 id="h3-conname">Name</h3>
+               <h3 id="h3-conmail">Mail-ID</h3>
+               <h3 id="h3-conrating">Rating</h3>
+               <h3 id="h3-confeedback">Feedback</h3>
+            </div>
+            <div id="dv-conformright">
+               <form id="fo-feedbackform"action="Feedback" method="post">
+                  <input type="text" id="in-conname" name="User_Name" placeholder="Please Enter Your Name..">
+                  <input type="text" id="in-conmail" name="MailID" placeholder="Please Enter Your Mail ID..">
+                  <ul>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating1">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating2">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating3">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating4">star</span></li>
+                     <li id="li-constar"><span class="material-symbols-outlined" id="bt-starrating5">star</span></li>
+                  </ul>
+                  <textarea id="tx-confeedback" name="Feedbacks" placeholder="Explain What We Can Improve.."></textarea>
+                  <input type="submit" id="bt-contactsub" value="Submit">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div id="dv-footer">
+         <span class="material-symbols-outlined" id="bt-copyright">copyright</span>
+         <p id="p-footer">2024 - <a href="">CustQR.com</a></p>
+      </div>
+   </body>
+</html>
